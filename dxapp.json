@@ -72,7 +72,10 @@
       {
         "name": "python"
       },
-
+      {
+        "name": "pysam",
+        "package_manager": "pip3"
+      },
       {
         "name": "fingerprint",
         "package_manager": "git",

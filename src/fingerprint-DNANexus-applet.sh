@@ -17,7 +17,7 @@
 
 main() {
     # install dependencies
-    pip3 install pysam
+    #pip3 install pysam
 
     echo "Value of input: '$input'"
     echo "Value of secondary_input: '$secondary_input'"
