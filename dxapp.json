@@ -1,0 +1,98 @@
+{
+  "name": "fingerprint-DNANexus-applet",
+  "title": "fingerprint",
+  "summary": "Calculates a unique 'fingerprint' from Illumina methylation or sequencing data using major/minor allele fractions from highly variable SNPs in the human genome.",
+  "dxapi": "1.0.0",
+  "version": "0.0.1",
+  "inputSpec": [
+    {
+      "name": "input",
+      "class": "file",
+      "optional": false,
+      "patterns": [
+        "*.bam",
+        "*.idat"
+      ],
+      "help": "For sequencing data, provide a .bam file. For methylation, provide an .idat file (either green or red)."
+    },
+    {
+      "name": "secondary_input",
+      "class": "file",
+      "optional": false,
+      "patterns": [
+        "*.bai",
+        "*.idat"
+      ],
+      "help": "For sequencing data, provide the corresponding .bai file. For methylation, provide the other .idat file."
+    },
+    {
+      "name": "snp_set",
+      "class": "file",
+      "optional": true,
+      "patterns": [
+        "*.bed"
+      ],
+      "help": "Set of SNPs to consider for fingerprinting."
+    },
+    {
+      "name": "name",
+      "class": "string",
+      "optional": true,
+      "help": "Name of sample. Default is the basename of the input file."
+    },
+    {
+      "name": "outfile",
+      "class": "string",
+      "optional": true,
+      "help": "Name of the output file. Default is [name].fp."
+    }
+  ],
+  "outputSpec": [
+    {
+      "name": "fingerprint",
+      "class": "file",
+      "patterns": [
+        "*.fp"
+      ],
+      "help": ""
+    }
+  ],
+  "runSpec": {
+    "timeoutPolicy": {
+      "*": {
+        "hours": 1
+      }
+    },
+    "interpreter": "bash",
+    "file": "src/fingerprint-DNANexus-applet.sh",
+    "distribution": "Ubuntu",
+    "release": "20.04",
+    "version": "0",
+    "execDepends": [
+      {
+        "name": "python"
+      },
+
+      {
+        "name": "fingerprint",
+        "package_manager": "git",
+        "url": "https://github.com/chavez-lab/fingerprint.git",
+        "destdir": "resources"
+      }
+    ]
+  },
+  "access": {
+    "network": [
+      "*"
+    ]
+  },
+  "regionalOptions": {
+    "azure:westus": {
+      "systemRequirements": {
+        "*": {
+          "instanceType": "azure:mem2_ssd1_x1"
+        }
+      }
+    }
+  }
+}
