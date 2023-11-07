@@ -3,14 +3,42 @@
 
 Calculates a unique 'fingerprint' from Illumina methylation or sequencing data using major/minor allele fractions from highly variable SNPs in the human genome.
 
-This is the source code for an app that runs on the DNAnexus Platform.
+This is the source code for an applet that runs on the DNAnexus Platform: https://platform.dnanexus.com/projects/GZ1Z4VQ9ZYgf4ZQybYk3qQ7V/monitor/job/Gb4YQBj9ZYgX9xJ7J4ZKBf6k.
 For more information about how to run or modify it, see
 https://documentation.dnanexus.com/.
 <!-- /dx-header -->
 
-Doesn't work. 
+Doesn't work. Latest error log attached.
 ```
-
+Logging initialized (priority)
+Logging initialized (bulk)
+Installing apt packages python
+Installing git packages fingerprint
+Setting SSH public key
+dxpy/0.361.0 (Linux-5.15.0-1051-azure-x86_64-with-glibc2.29) Python/3.8.10
+bash running (job ID job-Gb4YQBj9ZYgX9xJ7J4ZKBf6k)
+WARNING: The directory '/home/dnanexus/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Collecting pysam
+  Downloading pysam-0.22.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (21.8 MB)
+Installing collected packages: pysam
+Successfully installed pysam-0.22.0
+Value of input: '{"$dnanexus_link": "file-Gb241zj9ZYgk9Qq9X2VG9Z6z"}'
+Value of secondary_input: '{"$dnanexus_link": "file-Gb241zj9ZYgpQFQ9JYQ5301Z"}'
+Value of snp_set: '{"$dnanexus_link": "file-Gb255b09ZYgV8qpbQg2PjzKX"}'
+Value of name: ''
+Value of outfile: ''
+pwd:
+/home/dnanexus
+cwd:
+total 4.8G
+-rw-r--r-- 1 dnanexus root     3.9K Nov  6 19:09 dnanexus-executable.json
+-rw-r--r-- 1 dnanexus root     1.7K Nov  6 19:09 dnanexus-job.json
+-rw-r--r-- 1 dnanexus root      265 Nov  6 19:11 dx_stderr
+-rw-r--r-- 1 dnanexus root      596 Nov  6 19:12 dx_stdout
+-rw-r--r-- 1 dnanexus dnanexus  571 Nov  6 19:09 environment
+-rw-r--r-- 1 root     root     4.8G Nov  6 19:12 input.bam
+-rw-r--r-- 1 root     root     2.4M Nov  6 19:12 input.bam.bai
+-rwxr-xr-x 1 dnanexus dnanexus 1.7K Nov  6 19:09 job-Gb4YQBj9ZYgX9xJ7J4ZKBf6k
 -rw-r--r-- 1 root     root     3.0K Nov  6 19:10 job-Gb4YQBj9ZYgX9xJ7J4ZKBf6k.code.sh
 -rw-r--r-- 1 dnanexus dnanexus  198 Nov  6 19:09 job_input.json
 -rw-r--r-- 1 root     root      41K Nov  6 19:12 snp_set
@@ -22,6 +50,8 @@ drwxr-xr-x   6 root   root     540 Nov  6 19:09 dev
 drwxr-xr-x   1 root   root    3.5K Nov  6 19:09 etc
 drwxr-xr-x   1 root   root      16 Oct 16 19:42 home
 lrwxrwxrwx   1 root   root       7 Oct 11 21:39 lib -> usr/lib
+lrwxrwxrwx   1 root   root       9 Oct 11 21:39 lib32 -> usr/lib32
+lrwxrwxrwx   1 root   root       9 Oct 11 21:39 lib64 -> usr/lib64
 lrwxrwxrwx   1 root   root       9 Oct 11 21:39 lib32 -> usr/lib32
 lrwxrwxrwx   1 root   root       9 Oct 11 21:39 lib64 -> usr/lib64
 lrwxrwxrwx   1 root   root      10 Oct 11 21:39 libx32 -> usr/libx32
