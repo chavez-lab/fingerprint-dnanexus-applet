@@ -16,6 +16,7 @@ app](https://documentation.dnanexus.com/developer/apps/intro-to-building-apps)
 - [Advanced building a dx app](https://documentation.dnanexus.com/developer/apps/advanced-app-tutorial)
 - [Adding a git dependency to your dx 
 app](https://documentation.dnanexus.com/getting-started/developer-tutorials/bash/git-dependency)
+- [I/O to/from DNANexus](https://documentation.dnanexus.com/developer/apps/bash#downloading-and-using-file-inputs)
 - [pysam dx app 
 example](https://documentation.dnanexus.com/getting-started/developer-tutorials/python/pysam)
 - [Shanqing's 2020 
