@@ -3,7 +3,7 @@
 
 Calculates a unique 'fingerprint' from Illumina methylation or sequencing data using major/minor allele fractions from highly variable SNPs in the human genome.
 
-This is the source code for an applet that runs on the DNAnexus Platform: https://platform.dnanexus.com/projects/GZ1Z4VQ9ZYgf4ZQybYk3qQ7V/monitor/job/Gb4YQBj9ZYgX9xJ7J4ZKBf6k.
+This is the source code for an applet that runs on the DNAnexus Platform.
 For more information about how to run or modify it, see
 https://documentation.dnanexus.com/.
 <!-- /dx-header -->
